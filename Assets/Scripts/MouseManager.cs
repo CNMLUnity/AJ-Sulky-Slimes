@@ -15,12 +15,16 @@ public class MouseManager : MonoBehaviour
     public Rigidbody slimeRigidbody;
 
     private Vector3 ohyeah;
+
+    public Vector3 cannonball;
     // Start is called before the first frame update
                                                 
     // Update is called once per frame
     
     void Start(){
-        ohyeah = slimeRigidbody.isKinematic;
+        cannonball = slimeTransform.position;
+        Debug.Log("I COMMIT CRIMES USING DIRECTION AND MAGNITUDE OH YEAH");
+        Debug.Log(cannonball);
     }
     
         void Update()
@@ -38,6 +42,7 @@ public class MouseManager : MonoBehaviour
                 mouseDifference.y * 1.2f, 
                 mouseDifference.y * 1.5f
             );
+            slimeTransform.position = cannonball - launchVector / 400;
             launchVector.Normalize();
         }
 
@@ -47,7 +52,8 @@ public class MouseManager : MonoBehaviour
             slimeRigidbody.AddForce(launchVector * launchForce,ForceMode.Impulse);
         }
         if (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0)){
-            isKinematic = false;
+            slimeTransform.position = cannonball;
+            slimeRigidbody.isKinematic = true;
 
         }
     }
