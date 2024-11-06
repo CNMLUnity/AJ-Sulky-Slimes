@@ -21,13 +21,13 @@ public class Collectable : MonoBehaviour
         transform.position = startingPosition + new Vector3(0.0f, Mathf.Sin(Time.time), 0.0f);
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Core"))
         {
             gameObject.SetActive(false);
         }
-    }
+    }*/
 
     private void OnTriggerEnter(Collider collision)
     {

@@ -14,6 +14,9 @@ public class MouseManager : MonoBehaviour
     public Transform slimeTransform;
     public Rigidbody slimeRigidbody;
 
+    [Header("Lives")]
+    public LivesManager livesManager;
+
     private Vector3 ohyeah;
 
     public Vector3 cannonball;
@@ -28,7 +31,10 @@ public class MouseManager : MonoBehaviour
     }
     
         void Update()
-    {
+    {if (livesManager.lives < 0)
+        {
+            return;
+        }
         if (Input.GetMouseButtonDown(0)){
 
             clickStartLocation = Input.mousePosition;
@@ -50,6 +56,7 @@ public class MouseManager : MonoBehaviour
 
             slimeRigidbody.isKinematic = false;
             slimeRigidbody.AddForce(launchVector * launchForce,ForceMode.Impulse);
+            livesManager.RemoveLife();
         }
         if (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0)){
             slimeTransform.position = cannonball;
@@ -57,4 +64,5 @@ public class MouseManager : MonoBehaviour
 
         }
     }
+
 }
