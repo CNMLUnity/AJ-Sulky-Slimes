@@ -17,7 +17,7 @@ public class LivesManager : MonoBehaviour
         hearts[lives].SetActive(false);
         if(lives == 0)
         {
-           SceneManager.LoadScene(0);
+           SceneManager.LoadScene(1);
         }
     }
     void Start()
