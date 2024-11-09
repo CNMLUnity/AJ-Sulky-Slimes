@@ -55,6 +55,7 @@ public class MouseManager : MonoBehaviour
         if (Input.GetMouseButtonUp(0)){
 
             slimeRigidbody.isKinematic = false;
+            launchVector.y += 0.01f;
             slimeRigidbody.AddForce(launchVector * launchForce,ForceMode.Impulse);
             livesManager.RemoveLife();
         }
