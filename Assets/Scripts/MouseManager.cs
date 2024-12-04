@@ -20,6 +20,7 @@ public class MouseManager : MonoBehaviour
     private Vector3 ohyeah;
 
     public Vector3 cannonball;
+    public bool isShooting = false;
     // Start is called before the first frame update
                                                 
     // Update is called once per frame
@@ -57,11 +58,14 @@ public class MouseManager : MonoBehaviour
             slimeRigidbody.isKinematic = false;
             launchVector.y += 0.01f;
             slimeRigidbody.AddForce(launchVector * launchForce,ForceMode.Impulse);
-            livesManager.RemoveLife();
+            isShooting = true;
+            
         }
-        if (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0)){
+        if (Input.GetKeyDown("space") || Input.GetMouseButtonDown(0) && isShooting){
             slimeTransform.position = cannonball;
+            livesManager.RemoveLife();
             slimeRigidbody.isKinematic = true;
+            isShooting = false;
 
         }
     }

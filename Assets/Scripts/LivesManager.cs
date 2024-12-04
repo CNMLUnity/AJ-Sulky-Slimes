@@ -8,6 +8,8 @@ public class LivesManager : MonoBehaviour
 {
     public int lives;
     public GameObject[] hearts;
+    //Scene scene = SceneManager.GetActiveScene();
+    
     // Start is called before the first frame update
 
     public void RemoveLife()
@@ -17,7 +19,15 @@ public class LivesManager : MonoBehaviour
         hearts[lives].SetActive(false);
         if(lives == 0)
         {
-           SceneManager.LoadScene(1);
+            /*if (scene.name == "SulkySlimes"){
+                SceneManager.LoadScene(1);
+            } else {
+                SceneManager.LoadScene(3);
+            }
+            
+            */
+           
+
         }
     }
     void Start()

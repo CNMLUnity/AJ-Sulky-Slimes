@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SulkySlimes 2.unity
     guid: 47bf463ffe9f4534491f5f6c2bb059ce
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 5b9292844cc418a4c86143488419a662
   m_configObjects: {}
