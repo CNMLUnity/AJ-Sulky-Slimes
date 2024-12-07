@@ -16,17 +16,17 @@ public class LivesManager : MonoBehaviour
     {
         lives -= 1;
         print("YOU LOST A LIFE, WHAT THE SIGMA" + lives);
-        hearts[lives].SetActive(false);
-        if(lives == 0)
+        if (lives >= 0)
         {
-            /*if (scene.name == "SulkySlimes"){
-                SceneManager.LoadScene(1);
-            } else {
+            hearts[lives].SetActive(false);
+        }
+        if(lives <= 0)
+        {
+            if (SceneManager.GetActiveScene().name == "SulkySlimes" || SceneManager.GetActiveScene().name == "SulkySlimes 2")
+            {
                 SceneManager.LoadScene(3);
             }
-            
-            */
-           
+
 
         }
     }
