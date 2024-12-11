@@ -168,7 +168,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: file://C:/Users/marda/Downloads/voodoo-doll-skull-rip-dead-8nbkn48m3tkddah6.mp4
+  m_Url: https://rawcdn.githack.com/CNMLUnity/AJ-Sulky-Slimes/ca5c5decf40a25dbf5b72c4ad085761c05d649c4/shrimp%20quartet%20[u4ecB57jFhI]%20(1).mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
