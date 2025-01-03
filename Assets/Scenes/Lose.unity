@@ -168,7 +168,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: https://rawcdn.githack.com/CNMLUnity/AJ-Sulky-Slimes/ca5c5decf40a25dbf5b72c4ad085761c05d649c4/shrimp%20quartet%20[u4ecB57jFhI]%20(1).mp4
+  m_Url: https://rawcdn.githack.com/CNMLUnity/AJ-Sulky-Slimes/8c42c7265d95eb61ce526ab23f372b21e60d0f7d/spongebob%20sad%20music%20meme%20(full).mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
